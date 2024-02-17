@@ -10,13 +10,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Center(
-        child:Container(
-          child: Text('야옹', style:TextStyle(fontSize: 14, color: Colors.black)),
-          width: 50,
-          height: 50,
-          color: Colors.pinkAccent,
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Row(
+          children: [
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Icon(Icons.star)
+          ]
         ),
+        bottomNavigationBar: BottomAppBar(),
       )
     );
   }
