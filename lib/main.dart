@@ -15,20 +15,21 @@ class MyApp extends StatelessWidget {
           title:Text('야옹앱', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.pinkAccent,
         ),
-        body: Text('냥냥펀치!'),
-        bottomNavigationBar: BottomAppBar(
-          child: SizedBox(
-            height: 100,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(Icons.phone),
-                Icon(Icons.message),
-                Icon(Icons.contact_page),
-              ],
-            )
-          )
-        ),
+        body: Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            width: double.infinity, // 부모 박스 영역 모두 채우기
+            height: 50,
+            // color: Colors.pinkAccent, 에러. 같은 속성은 한 번만 작성해야 함
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+            decoration: BoxDecoration(
+              color: Colors.pinkAccent,
+              border: Border.all(color: Colors.black)
+            ),
+            child: Text('냥냥펀치!')
+          ),
+        )
       )
     );
   }
